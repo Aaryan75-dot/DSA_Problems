@@ -1,0 +1,36 @@
+class Solution {
+    public static int findUnion(int a[], int b[]) {
+        // code here
+        HashSet<Integer> set = new HashSet<>();
+        
+        for(int i = 0;i<a.length;i++){
+            set.add(a[i]);
+        }
+        
+        for(int i = 0;i<b.length;i++){
+            set.add(b[i]);
+        }
+        
+        return set.size();
+    }
+}
+
+// Using HashMap
+class Solution{
+    public static int findUnion(int a[], int b[]) 
+    {
+        //Your code here
+        HashMap<Integer,Integer> mp = new HashMap<>();
+        
+        for(int i=0;i<a.length;i++){
+            mp.put(a[i],i);
+        }
+        
+        for(int i=0;i<b.length;i++){
+            mp.put(b[i],i);
+        }
+        return mp.size();
+        
+    
+    }
+}
